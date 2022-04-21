@@ -1,0 +1,53 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Pomodoro 
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css")
+        //- link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js")
+        link(rel="stylesheet", href="css/style.css")
+    body 
+        h1 Pomodoro 
+        div(class="menu")
+            span(onclick="menu('0')", class="menuSpan") Pomodoro 
+            span(onclick="menu('1')", class="menuSpan") Short Breack
+            span(onclick="menu('2')", class="menuSpan") loang Breack 
+        div(class="app")
+            div(class="app-timer")
+                span("appTimeSpan") 
+                div(class="timer")
+                    p(class="timerp") 00:00
+                    span(onclick="playPause()", class="playPause") Play
+        i(class="fa-solid fa-gear", onclick="openSit()")
+        div(class="sitings")
+            h3 Settings 
+            //- span(class="x", onclick="close()") × 
+            hr
+            h5 Time {Minutse}
+            div(class="mic-con")
+                div(class="one")
+                    p Pomodoro 
+                    input(type="number", value="25", class="inputs")
+                div(class="two")
+                    p Short breack 
+                    input(type="number", value="5", class="inputs")
+                div(class="three")
+                    p Long breack 
+                    input(type="number", value="35", class="inputs")
+            div(class="font")
+                h6 FONT
+                div(class="fonts")
+                    span(onclick="font('0')", class="fontspan", font="'Roboto', sans-serif") Aa 
+                    span(onclick="font('1')", class="fontspan", font="Text") Aa 
+                    span(onclick="font('2')", class="fontspan", font="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif") Aa 
+            div(class="color")
+                h6 COLOR
+                div(class="colors")
+                    span(onclick="color('0')", class="colorSpan", color="#020314") 
+                    span(onclick="color('1')", class="colorSpan", color="#1e2140")
+                    span(onclick="color('2')", class="colorSpan", color="#3339b9")
+            button(onclick="apply()") Apply
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js") 
+    script(src="js/script.js") 
